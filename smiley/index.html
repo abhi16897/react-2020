@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Canvas</title>
+        <link rel="stylesheet" href="./style.css" />
+       <style>
+           canvas{
+    position: absolute;
+    top: 40%;
+    left: 45%;
+}
+       </style>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Smiley</h1>
+       <canvas id="canvas" width="400px" height="400px"></canvas>  
+       <script>
+           var canvas=document.getElementById("canvas");
+    var c=canvas.getContext("2d");
+c.beginPath();
+c.arc(100,100,100,0,Math.PI*2);
+c.moveTo(80,70);
+c.arc(60,70,20,0,Math.PI*2);
+c.moveTo(160,70);
+c.arc(140,70,20,0,Math.PI*2);
+c.moveTo(180,100);
+c.arc(100,100,80,0,Math.PI);
+c.moveTo(180,100);
+c.ellipse(100,100,80,40,0,0,Math.PI);
+c.stroke();
+       </script>
+    </body>
+</html>

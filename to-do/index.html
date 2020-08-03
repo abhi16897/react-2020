@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>To do</title>
+    </head>
+    <body>
+      
+            <table>
+                <tr>
+                    <td>Enter to do</td>
+                    <td><input type="text" name="to-do" id="to-do"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button onclick="addToDo()">Submit</button></td>
+                </tr>
+            </table>
+            <button onclick="display()">To do List</button>
+            <p id="list"></p>
+        <script>
+            var todoList=[];
+            var text= "";
+            function addToDo(){
+                var toDo=document.getElementById("to-do").value;
+                todoList.push(toDo);
+                console.log(todoList);
+                localStorage.setItem("todoList",JSON.stringify(todoList));
+                console.log(localStorage.todoList);
+           
+            }
+            function display(){
+                var listi2=[]
+                
+                var listi2=JSON.parse(localStorage['todoList']);
+                console.log(listi2)
+                for(i=0;i<listi2.length;i++){
+                    console.log(listi2);
+                        text +=listi2[i];
+                       text +="<br>"
+                }
+                listi2=[];
+                listi=null;
+             document.getElementById("list").innerHTML=text;
+            }
+          
+        </script>
+    </body>
+</html>
