@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ 
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO</title>
+    <!-- <link rel="stylesheet" href="/css/todo.css"> -->
+</head>
+
+ 
+
+<style>
+    .new-todo {
+    border: 1px solid black;
+    width: 40%;
+    height: auto;
+    float: left;
+    margin-top: 100px;
+}
+
+ 
+
+.completed {
+    border: 1px solid black;
+    width: 40%;
+    height: auto;
+    float: right;
+    margin-right: 100px;
+    margin-top: 100px;
+}
+
+ 
+
+</style>
+
+ 
+
+<body>
+    <div>
+        <div style="margin-top: 20px;">
+            <p>Add Todo here: </p>
+            <input type="text" id="myInput" />
+            <button onclick="addTodo()">Add</button>
+        </div>
+        <div class="new-todo">
+            <p style="text-align: center;">NEW TODOS</p>
+            <hr>
+            <ul id="new-task">
+                <!-- <li>shop</li> -->
+            </ul>
+        </div>
+        <div class="completed">
+            <p style="text-align: center;">COMPLETED</p>
+            <hr>
+            <ul id="comp-task">
+                <!-- <li>shop</li> -->
+            </ul>
+        </div>
+    </div>
+    <script>
+        var done = document.getElementsByClassName("done");
+        // Create a new list item when clicking on the "Add" button
+        function addTodo() {
+            var li = document.createElement("li");
+            var inputValue = document.getElementById("myInput").value;
+            var t = document.createTextNode(inputValue);
+            li.className = inputValue;
+            li.appendChild(t);
+            document.getElementById("new-task").appendChild(li);           
+            document.getElementById("myInput").value = "";
+
+ 
+
+            // adding Done button to li
+            var span = document.createElement("button");
+            var txt = document.createTextNode("Done");
+            span.className = "done";
+            span.appendChild(txt);
+            li.appendChild(span);
+
+ 
+
+            for (i = 0; i < done.length; i++) {
+                done[i].onclick = function () {
+                    var div = this.parentElement;
+                    div.style.display = "none";
+                    var li = document.createElement("li");
+                    var inputValue = div.className;
+                    var t = document.createTextNode(inputValue);
+                    li.appendChild(t);
+                    document.getElementById("comp-task").appendChild(li);
+                }
+            }
+        }
+    </script>
+</body>
+
+ 
+
+</html><html><head><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"><meta name="Robots" content="NOINDEX " /></head><body></body>
+                <script type="text/javascript">
+                 var gearPage = document.getElementById('GearPage');
+                 if(null != gearPage)
+                 {
+                     gearPage.parentNode.removeChild(gearPage);
+                     document.title = "Error";
+                 }
+                 </script>
+                 </html>
