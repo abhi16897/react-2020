@@ -7,7 +7,6 @@ function App() {
   return (
     <div>
          <Nav></Nav>
-          Welcome to Product inventory System
     </div>
   );
 }
