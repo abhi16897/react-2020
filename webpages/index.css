@@ -19,8 +19,9 @@ body {
     text-decoration: none;
     font-size: 17px;
     text-align: center;
-    float: right;
+    float: right;  
 }
+
 .custom-nav a:hover{
     background-color: #ddd;
     color: black;
@@ -53,8 +54,10 @@ body {
     background-color: #EFF0F1;
     border: 1px solid;
     padding: 10px;
+    border-radius: 70px;
     box-shadow: 5px 10px #888888;
 }
+
 form a{
     font-size: 10px;
 }

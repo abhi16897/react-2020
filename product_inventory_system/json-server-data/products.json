@@ -1,0 +1,67 @@
+{
+  "allProducts": [
+    {
+      "id": 2,
+      "name": "Hp",
+      "price": 60000,
+      "description": "This is  Good laptop",
+      "stock": 50,
+      "imageUrl": "",
+      "category": "Electronics "
+    },
+    {
+      "name": "Lenovo",
+      "price": 65000,
+      "stock": 150,
+      "description": "This is  Good laptop",
+      "category": "Electronics",
+      "imageUrl": "",
+      "id": 3
+    },
+    {
+      "id": 4,
+      "name": "Accer",
+      "price": 70000,
+      "description": "This is  Good laptop",
+      "stock": 200,
+      "imageUrl": "",
+      "category": "Electronics "
+    },
+    {
+      "id": 5,
+      "name": "Toshiba",
+      "price": 75000,
+      "description": "This is  Good laptop",
+      "stock": 270,
+      "imageUrl": "",
+      "category": "Electronics "
+    },
+    {
+      "name": "Apple",
+      "price": "50",
+      "stock": "500",
+      "description": "These are Good For health",
+      "category": "Fruits",
+      "imageUrl": "",
+      "id": 7
+    },
+    {
+      "name": "Egg",
+      "price": "5",
+      "stock": "500",
+      "description": "Tasty",
+      "category": "Groceries",
+      "imageUrl": "",
+      "id": 8
+    },
+    {
+      "name": "chicken",
+      "price": "123",
+      "stock": "560",
+      "description": "good for health",
+      "category": "Groceries",
+      "imageUrl": "",
+      "id": 9
+    }
+  ]
+}
