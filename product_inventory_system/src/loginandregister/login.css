@@ -20,6 +20,13 @@ form a{
     width: 250px;
    /* border:1px solid;*/
 }
+.error{
+    color:red;
+}
+.error1{
+    color: red;
+    text-align: center;
+}
 .center h1{
     text-align: center;
 }

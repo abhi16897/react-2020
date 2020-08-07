@@ -46,7 +46,7 @@
       "id": 7
     },
     {
-      "name": "Egg",
+      "name": "Egg123",
       "price": "5",
       "stock": "500",
       "description": "Tasty",
@@ -55,13 +55,33 @@
       "id": 8
     },
     {
-      "name": "chicken",
-      "price": "123",
-      "stock": "560",
-      "description": "good for health",
-      "category": "Groceries",
+      "name": "Lenovo1",
+      "price": "4564",
+      "stock": "256",
+      "description": "adflksjdlkf",
+      "category": "Electronics",
       "imageUrl": "",
       "id": 9
+    }
+  ],
+  "userDetails": [
+    {
+      "id": 1,
+      "username": "abhi16897",
+      "email": "saiabhishek1997@gmail.com",
+      "password": "saiabhi1"
+    },
+    {
+      "username": "abhi16898",
+      "email": "saiabhishek0@gmail.com",
+      "password": "saiabhi1",
+      "id": 2
+    },
+    {
+      "username": "abhi16895",
+      "email": "saiabhishek12@gmail.com",
+      "password": "saiabhi1",
+      "id": 3
     }
   ]
 }

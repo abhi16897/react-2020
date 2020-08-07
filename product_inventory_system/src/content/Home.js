@@ -1,6 +1,7 @@
 import React from 'react';
 import Product from './Product';
 import axios from 'axios';
+import './home.css'
 class Home extends React.Component {
     constructor(props){
         super(props)
@@ -69,13 +70,14 @@ class Home extends React.Component {
     }
     render() { 
         return (  
-            <div>
+            <div className="home">
                 <h1>Welcome Home!</h1>
-                <input type="text" name="search" onChange={this.searchProducts}/>
+                <div>
+                <input type="text" name="search" className="searchBox" placeholder="Serach for Products" onChange={this.searchProducts}/>
+                </div>
                 <div>
                 {this.renderall()}
                 </div>
-               
                </div>
         );
     }
