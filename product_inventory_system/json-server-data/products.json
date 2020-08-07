@@ -1,67 +1,40 @@
 {
   "allProducts": [
     {
-      "id": 2,
-      "name": "Hp",
-      "price": 60000,
-      "description": "This is  Good laptop",
-      "stock": 50,
-      "imageUrl": "",
-      "category": "Electronics "
+      "name": "Hp12",
+      "price": "500",
+      "stock": "200",
+      "description": "hello",
+      "category": "Groceries",
+      "imageUrl": "hp.jpg",
+      "id": 10
     },
     {
       "name": "Lenovo",
-      "price": "6500",
-      "stock": 150,
-      "description": "This is  Good laptop",
+      "price": "1600",
+      "stock": "250",
+      "description": "nice laptop",
       "category": "Electronics",
-      "imageUrl": "",
-      "id": 3
+      "imageUrl": "lenovo.jpg",
+      "id": 11
     },
     {
-      "id": 4,
       "name": "Accer",
-      "price": 70000,
-      "description": "This is  Good laptop",
-      "stock": 200,
-      "imageUrl": "",
-      "category": "Electronics "
-    },
-    {
-      "id": 5,
-      "name": "Toshiba",
-      "price": 75000,
-      "description": "This is  Good laptop",
-      "stock": 270,
-      "imageUrl": "",
-      "category": "Electronics "
-    },
-    {
-      "name": "Apple",
-      "price": "50",
-      "stock": "500",
-      "description": "These are Good For health",
-      "category": "Fruits",
-      "imageUrl": "",
-      "id": 7
-    },
-    {
-      "name": "Egg123",
-      "price": "5",
-      "stock": "500",
-      "description": "Tasty",
-      "category": "Groceries",
-      "imageUrl": "",
-      "id": 8
-    },
-    {
-      "name": "Lenovo1",
-      "price": "4564",
-      "stock": "256",
-      "description": "adflksjdlkf",
+      "price": "56000",
+      "stock": "450",
+      "description": "Nice Latop and good accessories \nand having many benifitts",
       "category": "Electronics",
-      "imageUrl": "",
-      "id": 9
+      "imageUrl": "accer.jpg",
+      "id": 12
+    },
+    {
+      "name": "Dell",
+      "price": "50000",
+      "stock": "4567",
+      "description": "Nice Laptop",
+      "category": "Electronics",
+      "imageUrl": "dell.jpg",
+      "id": 13
     }
   ],
   "userDetails": [

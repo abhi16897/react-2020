@@ -9,8 +9,15 @@ class EditComponent extends React.Component {
             price:0,
             stock:0,
             description:'',
-            category:''
+            category:'',
+
+            nameError:'',
+            priceError:'',
+            stockError:'',
+            descriptionError:'',
+            categoryError:''
         }
+        
     }
     componentWillMount(){
        axios.get('http://localhost:3000/allProducts/'+this.props.match.params.id).then((res)=>{
@@ -43,6 +50,69 @@ class EditComponent extends React.Component {
             this.props.history.push('/home');
         })
     }
+    checkValidation=(event)=>{
+        let nameerror=''
+        let priceerror=''
+        let stockerror=''
+        let descriptionerror=''
+        let categoryerror=''
+
+        if(event==='name' && this.state.name ===''){
+            nameerror='name is required'
+        }
+        if(event === 'price' && this.state.price===''){
+            priceerror='price is required'
+        }
+        if(event ==='stock' && this.state.stock===''){
+            stockerror='stock is required'
+        }
+        if(event ==='description' && this.state.description ===''){
+            descriptionerror='description is required'
+        }
+        if(event ==='category' && this.state.category ===''){
+            categoryerror='category is required'
+        }
+        if(nameerror|| stockerror|| priceerror || descriptionerror || categoryerror){
+            this.setState({
+                nameError:nameerror,
+                priceError:priceerror,
+                stockError:stockerror,
+                descriptionError:descriptionerror,
+                categoryError:categoryerror
+            })
+            return false
+        }
+        this.setState({
+            nameError:'',
+            priceError:'',
+            stockError:'',
+            descriptionError:'',
+            categoryError:''
+        })
+        return true
+
+    }
+    onblurname=(event)=>{
+        this.setState({name:event.target.value})
+        this.checkValidation('name')
+    }
+    onblurprice=(event)=>{
+        this.setState({price:event.target.value})
+        this.checkValidation('price')
+    }
+    onblurstock=(event)=>{
+        this.setState({stock:event.target.value})
+        this.checkValidation('stock')
+    }
+    onblurdescription=(event)=>{
+        this.setState({description:event.target.value})
+        this.checkValidation('description')
+    }
+    onblurselect=(event)=>{
+        this.setState({category:event.target.value})
+        this.checkValidation('category')
+    }
+  
     render() { 
         return (  
             
@@ -54,19 +124,26 @@ class EditComponent extends React.Component {
                 <tbody>
                 <tr>
                     <td><label>Name</label></td>
-                    <td><input type="text" name="name" value={this.state.name} onChange={this.onChange}/></td>
+                    <td><input type="text" name="name" value={this.state.name} onChange={this.onChange} onBlur={this.onblurname}/>
+                    <span className="error">{this.state.nameError}</span></td>
                 </tr>
                 <tr>
                     <td><label>Price</label></td>
-                    <td><input type="number" name="price" value={this.state.price} onChange={this.onChange}/></td>
+                    <td><input type="number" name="price" value={this.state.price} onChange={this.onChange} onBlur={this.onblurprice}/>
+                    <span className="error">{this.state.priceError}</span></td>
                 </tr>
                 <tr>
                     <td><label>Stock</label></td>
-                    <td><input type="number" name="stock" value={this.state.stock} onChange={this.onChange}/></td>
+                    <td><input type="number" name="stock" value={this.state.stock} onChange={this.onChange} onBlur={this.onblurstock}/>
+                    <span className="error">{this.state.stockError}</span></td>
                 </tr>
                 <tr>
                     <td><label>Description</label></td>
-                    <td><textarea id="description" name="description" rows="4" cols="30"  value={this.state.description} onChange={this.onChange}></textarea></td>
+                    <td><textarea id="description" name="description" rows="4" cols="30"  value={this.state.description} onChange={this.onChange} onBlur={this.onblurdescription}>
+                    <span className="error">{this.state.descriptionError}</span>
+                    </textarea>
+                        
+                    </td>
                 </tr>
                 <tr>
                     <td><label>Image</label></td>
@@ -74,13 +151,15 @@ class EditComponent extends React.Component {
                 </tr>
                 <tr>
                     <td><label>Category</label></td>
-                    <td><select name='category' onChange={this.onChange} value={this.state.category}>
+                    <td><select name='category' onChange={this.onChange} value={this.state.category} onBlur={this.onblurselect}>
                         <option value=''>Select One</option>
                         <option value="Groceries">Groceries</option>
                         <option value="Electronics">Electronics</option>
                         <option value="Vegitables">Vegitables</option>
                         <option values="Fruits">Fruits</option>
-                    </select></td>
+                    </select>
+                    <span className="error">{this.state.categoryError}</span>
+                    </td>
                 </tr>
                 <tr>
                     <td></td>

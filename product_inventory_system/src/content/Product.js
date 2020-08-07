@@ -17,7 +17,7 @@ class Product extends React.Component {
         return ( 
             
             <div className="card">
-                    <img src="" alt="hello"/>
+                    <img src={"images/"+this.props.imageUrl} alt="hello"/>
                     <section>
                         <h1><b>{this.props.name}</b></h1>
                         <p><b>Price:</b>{this.props.price}</p>
