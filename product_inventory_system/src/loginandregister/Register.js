@@ -18,7 +18,7 @@ class Register extends React.Component {
     }
     onSubmitregister=(e)=>{
         e.preventDefault();
-        this.props.history.push('/login');
+        this.props.history.push('/');
     }
     render() { 
         return ( 
@@ -47,10 +47,9 @@ class Register extends React.Component {
                         <td><input type="password" name="confirm_password" onChange={this.onChange}/></td>
                     </tr>
                     <tr>
-                        <td><Link to='/login'>Already User?</Link></td>
+                        <td><Link to='/'>Already User?</Link></td>
                         <td><button>Register</button></td>
                     </tr>
-                
                     </tbody>
                     </table>
             </form>

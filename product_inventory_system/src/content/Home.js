@@ -5,7 +5,8 @@ class Home extends React.Component {
     constructor(props){
         super(props)
         this.state = { 
-        allproducts:[]
+        allproducts:[],
+        orginalList:[]
         }
     }
     componentWillMount(){
@@ -17,6 +18,9 @@ class Home extends React.Component {
             console.log(res.data);
             this.setState({
                 allproducts:res.data
+            });
+            this.setState({
+                orginalList:res.data
             })
         })
     }
@@ -49,11 +53,29 @@ class Home extends React.Component {
             )
         })
     }
+    searchProducts=(e)=>{
+        console.log(this.state.orginalList)
+        if(e.target.value!==''){
+            console.log(e.target.value)
+            //let filterdValues=this.state.allproducts
+            let filterdValues=this.state.orginalList.filter((f)=>{
+                return f.name.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase());
+            })
+            this.setState({allproducts:filterdValues});
+        }else{
+            this.getAllproducts();
+        }
+     
+    }
     render() { 
         return (  
             <div>
                 <h1>Welcome Home!</h1>
+                <input type="text" name="search" onChange={this.searchProducts}/>
+                <div>
                 {this.renderall()}
+                </div>
+               
                </div>
         );
     }

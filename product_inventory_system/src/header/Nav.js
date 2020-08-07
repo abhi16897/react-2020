@@ -13,13 +13,14 @@ class Nav extends React.Component {
             <div>
             <div className="custom-nav">
             <Link>Smart Shop</Link>
+            <Link to="/">Logout</Link>
             <Link to='/register'>SignUp</Link>
-            <Link to='/login'>Login</Link>
+            <Link to='/'>Login</Link>
             <Link to='/addproduct'>Add Product</Link>
             <Link to="/home">Home</Link>
             </div>
             <Switch>
-                <Route path='/login' component={Login}></Route>
+                <Route exact path='/' component={Login}></Route>
                 <Route path='/register' component={Register}></Route>
                 <Route path="/home" component={Home}></Route>
                 <Route path="/addproduct" component={AddComponent}></Route>

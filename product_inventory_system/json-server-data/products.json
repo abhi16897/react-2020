@@ -11,7 +11,7 @@
     },
     {
       "name": "Lenovo",
-      "price": 65000,
+      "price": "6500",
       "stock": 150,
       "description": "This is  Good laptop",
       "category": "Electronics",
