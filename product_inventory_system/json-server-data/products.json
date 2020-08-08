@@ -1,7 +1,7 @@
 {
   "allProducts": [
     {
-      "name": "Hp12",
+      "name": "Hp",
       "price": "500",
       "stock": "200",
       "description": "hello",
@@ -11,30 +11,39 @@
     },
     {
       "name": "Lenovo",
-      "price": "1600",
-      "stock": "250",
-      "description": "nice laptop",
+      "price": "940",
+      "stock": "132",
+      "description": "1464",
       "category": "Electronics",
       "imageUrl": "lenovo.jpg",
-      "id": 11
-    },
-    {
-      "name": "Accer",
-      "price": "56000",
-      "stock": "450",
-      "description": "Nice Latop and good accessories \nand having many benifitts",
-      "category": "Electronics",
-      "imageUrl": "accer.jpg",
-      "id": 12
+      "id": 15
     },
     {
       "name": "Dell",
-      "price": "50000",
-      "stock": "4567",
-      "description": "Nice Laptop",
+      "price": "500",
+      "stock": "250",
+      "description": "This is a good Laptop and working Good . recommended to by",
       "category": "Electronics",
       "imageUrl": "dell.jpg",
-      "id": 13
+      "id": 16
+    },
+    {
+      "name": "Abhishek",
+      "price": "123",
+      "stock": "132",
+      "description": "123132",
+      "category": "Groceries",
+      "imageUrl": "graph.png",
+      "id": 17
+    },
+    {
+      "name": "Abhishek",
+      "price": "46979",
+      "stock": "13",
+      "description": "snajkfhaksjhkjladshfjklahdsjklfhakldsjhfkjlasdhfjkadshjfkhadsjklfhajdskhfkjadshlk",
+      "category": "Electronics",
+      "imageUrl": "dell.jpg",
+      "id": 18
     }
   ],
   "userDetails": [

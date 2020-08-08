@@ -10,6 +10,7 @@ class EditComponent extends React.Component {
             stock:0,
             description:'',
             category:'',
+            imageUrl:'',
 
             nameError:'',
             priceError:'',
@@ -43,7 +44,7 @@ class EditComponent extends React.Component {
             "stock":this.state.stock,
             "description":this.state.description,
             "category":this.state.category,
-            "imageUrl":''
+            "imageUrl":this.state.imageUrl
         }
         axios.put('http://localhost:3000/allProducts/'+this.props.match.params.id,addjsonObject).then((res)=>{
             console.log(res.data);
@@ -112,7 +113,9 @@ class EditComponent extends React.Component {
         this.setState({category:event.target.value})
         this.checkValidation('category')
     }
-  
+    onChangeimage=(event)=>{
+        this.setState({imageUrl:event.target.files[0].name})
+    }
     render() { 
         return (  
             
@@ -147,7 +150,7 @@ class EditComponent extends React.Component {
                 </tr>
                 <tr>
                     <td><label>Image</label></td>
-                    <td><input type="file"/></td>
+                    <td><input type="file" name="imageUrl" onChange={this.onChangeimage}/></td>
                 </tr>
                 <tr>
                     <td><label>Category</label></td>

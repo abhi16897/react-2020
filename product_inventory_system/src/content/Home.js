@@ -39,6 +39,7 @@ class Home extends React.Component {
     renderall=()=>{
         return this.state.allproducts.map((prod)=>{
             return (
+                <div className='product-card'>
                 <Product key={prod.id}
                         id={prod.id}
                         name={prod.name}
@@ -51,6 +52,7 @@ class Home extends React.Component {
                         itemupdate={this.updateItem}
                 >
                 </Product>
+                </div>
             )
         })
     }
