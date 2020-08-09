@@ -2,7 +2,7 @@
 
 step1: In this repository Product inventory system is the project that you need to run
 
-step2: go to the json server folder thtough command prompt and run "json-server products.json"
+step2: go to the json server folder through command prompt and run "json-server products.json"
 
 step3: run "npm install"
 
