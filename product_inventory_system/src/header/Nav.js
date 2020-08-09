@@ -45,6 +45,7 @@ class Nav extends React.Component {
                 <Route path="/editproduct/:id" component={EditComponent}></Route>
                 <Route path='/dashboard' component={ParentDashboard}></Route>
             </Switch>
+            
             </div>
          );
     }
