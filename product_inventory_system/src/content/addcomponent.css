@@ -1,10 +1,10 @@
 .add-form{
     position: absolute;
     width: 500px;
-    height:auto;
+    height:auto;    
     z-index: 15;
     top: 40%;
-    left: 20%;
+    left: 40%;
     margin: -100px 0 0 -150px;
     background-color: #EFF0F1;
     border: 1px solid;
@@ -12,13 +12,27 @@
     border-radius: 50px;
     box-shadow: 5px 10px #888888;
 }
+@media screen and (max-width:600px){
+    .add-form{
+        width: 400px;
+        position: relative;
+        left: 175px;
+        margin-top: 280px;
+    }
+    .add-form textarea{
+        width: 160px;
+    }
+}
+.error{
+    color: red;
+}
 .add-form h1{
     text-align: center;
 }
 .add-form form{
     margin-left: 25%;
     margin-top: 5%;
-    width: 250px;
+    width: 150px;
    /* border:1px solid;*/
 }
 .add-form table td{
@@ -26,6 +40,13 @@
 }
 .add-form form input{
     border-radius: 10px;
+}
+.add-form form select{
+    border-radius: 10px;
+    width: 170px;
+}
+.add-form textarea{
+    width: 157px;
 }
 .add-form form input:focus{
     border-radius: 10px;

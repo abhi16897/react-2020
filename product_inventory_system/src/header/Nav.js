@@ -6,6 +6,8 @@ import Register from '../loginandregister/Register';
 import Home from '../content/Home';
 import AddComponent from '../content/AddComponent';
 import EditComponent from '../content/EditComponent';
+//import Dashboard from '../content/Dasboard';
+import ParentDashboard from '../content/ParentDashboard';
 class Nav extends React.Component {
     logOut(e){
         e.preventDefault();
@@ -27,7 +29,9 @@ class Nav extends React.Component {
          <Link><b> Product Inventory System</b></Link>
             <Link onClick={this.logOut.bind(this)}>Logout</Link>
            <Link to='/addproduct'>Add Product</Link>
+           <Link to='/dashboard'>Dashboard</Link>
            <Link to='/home'>Home</Link>
+           
             </div>
         )
         return ( 
@@ -39,6 +43,7 @@ class Nav extends React.Component {
                 <Route path="/home" component={Home}></Route>
                 <Route path="/addproduct" component={AddComponent}></Route>
                 <Route path="/editproduct/:id" component={EditComponent}></Route>
+                <Route path='/dashboard' component={ParentDashboard}></Route>
             </Switch>
             </div>
          );

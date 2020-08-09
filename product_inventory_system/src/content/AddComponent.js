@@ -21,6 +21,11 @@ class AddComponent extends React.Component {
             categoryError:''
         }
     }
+    componentWillMount(){
+        if(localStorage.getItem('loggedIn') === null){
+            this.props.history.push('/');
+        }
+    }
     onChange=(e)=>{
         this.setState({[e.target.name]:e.target.value});
         console.log(e.target.value)
@@ -116,7 +121,7 @@ class AddComponent extends React.Component {
                 <tbody>
                 <tr>
                     <td><label>Name</label></td>
-                    <td><input type="text" name="name" value={this.state.name} onChange={this.onChange} onBlur={this.onblurname}/>
+                    <td><input type="text" name="name" value={this.state.name} onChange={this.onChange} required onBlur={this.onblurname}/>
                     <span className="error">{this.state.nameError}</span>
                     </td>
                 </tr>

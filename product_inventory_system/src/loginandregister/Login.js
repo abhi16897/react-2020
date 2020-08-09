@@ -16,6 +16,11 @@ class Login extends React.Component {
             passwordError:'',
          }
      }
+     componentWillMount(){
+         if(localStorage.getItem('loggedIn')){
+             localStorage.removeItem('loggedIn');
+         }
+     }
      initialsate=()=>{
         setTimeout(() => {
             this.setState({ loginStatus: false });

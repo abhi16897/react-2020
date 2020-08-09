@@ -21,6 +21,9 @@ class EditComponent extends React.Component {
         
     }
     componentWillMount(){
+        if(localStorage.getItem('loggedIn') === null){
+            this.props.history.push('/');
+        }
        axios.get('http://localhost:3000/allProducts/'+this.props.match.params.id).then((res)=>{
            console.log(res.data);
            this.setState({
