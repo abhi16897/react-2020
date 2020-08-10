@@ -12,6 +12,7 @@ class AddComponent extends React.Component {
             description:'',
             category:'',
             imageUrl:'',
+            buttonStatus:true,
 
             //Error
             nameError:'',
@@ -55,11 +56,11 @@ class AddComponent extends React.Component {
         if(event==='name' && this.state.name ===''){
             nameerror='name is required'
         }
-        if(event === 'price' && this.state.price===''){
-            priceerror='price is required'
+        if(event === 'price' && (this.state.price==='' || this.state.price<=0)){
+            priceerror='price is required/Invalid'
         }
-        if(event ==='stock' && this.state.stock===''){
-            stockerror='stock is required'
+        if(event ==='stock' && (this.state.stock==='' || this.state.stock<=0)){
+            stockerror='stock is required/Invalid'
         }
         if(event ==='description' && this.state.description ===''){
             descriptionerror='description is required'
@@ -73,7 +74,7 @@ class AddComponent extends React.Component {
                 priceError:priceerror,
                 stockError:stockerror,
                 descriptionError:descriptionerror,
-                categoryError:categoryerror
+                categoryError:categoryerror,
             })
             return false
         }
@@ -82,7 +83,8 @@ class AddComponent extends React.Component {
             priceError:'',
             stockError:'',
             descriptionError:'',
-            categoryError:''
+            categoryError:'',
+            buttonStatus:false
         })
         return true
 
@@ -161,7 +163,7 @@ class AddComponent extends React.Component {
                 </tr>
                 <tr>
                     <td></td>
-                    <td><button type="submit">Add/Update</button></td>
+                    <td><button type="submit" disabled={this.state.buttonStatus}>Add</button></td>
                 </tr>
                 </tbody>
                

@@ -64,11 +64,11 @@ class EditComponent extends React.Component {
         if(event==='name' && this.state.name ===''){
             nameerror='name is required'
         }
-        if(event === 'price' && this.state.price===''){
-            priceerror='price is required'
+        if(event === 'price' && (this.state.price==='' || this.state.price<=0)){
+            priceerror='price is required/Invalid'
         }
-        if(event ==='stock' && this.state.stock===''){
-            stockerror='stock is required'
+        if(event ==='stock' && (this.state.stock==='' || this.state.stock<0)){
+            stockerror='stock is required/Invalid'
         }
         if(event ==='description' && this.state.description ===''){
             descriptionerror='description is required'

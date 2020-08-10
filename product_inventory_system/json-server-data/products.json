@@ -39,11 +39,20 @@
     {
       "name": "iphone",
       "price": "120000",
-      "stock": "500",
+      "stock": "520",
       "description": "Nice MObile",
       "category": "Electronics",
       "imageUrl": "iphone.jpg",
       "id": 18
+    },
+    {
+      "name": "Dell",
+      "price": "940",
+      "stock": "0",
+      "description": "hello",
+      "category": "Electronics",
+      "imageUrl": "graph.png",
+      "id": 19
     }
   ],
   "userDetails": [

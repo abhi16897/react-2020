@@ -1,6 +1,6 @@
 import React from 'react';
 import Dashboard from './Dasboard';
-import { Pie } from 'react-chartjs-2';
+import {  Bar } from 'react-chartjs-2';
 import './parentdahsboard.css';
 import axios from 'axios'
 class ParentDashboard extends React.Component {
@@ -66,11 +66,12 @@ class ParentDashboard extends React.Component {
                 <div>
                     <Dashboard parentcategory={this.dashboardform}></Dashboard>
                 </div>
-                <div>
+                <div className="dashboard-bar">
                     <h1>Chart</h1>
-                    <Pie
+                    <Bar
                     data={this.state.charData}
-                    height={80}
+                    width={100}
+                    height={50}
                     options={{
                         title:{
                             display:true,
@@ -79,10 +80,11 @@ class ParentDashboard extends React.Component {
                         legend:{
                             display:true,
                             position:"top"
-                        }
+                        },
+                        maintainAspectRatio:false
                     }}>
 
-                    </Pie>
+                    </Bar>
                 </div>
             </div>
          );

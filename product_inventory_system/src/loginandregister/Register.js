@@ -10,12 +10,12 @@ class Register extends React.Component {
             password:'',
             email:'',
             confirm_password:'',
+            buttonStatus:true,
             // error variables
             nameError: '',
             emailError: '',
             passwordError: '',
             confirmPasswordError: '',
-            buttonStatus: true,
             signSuccess: false,
 
             usernameExists:false,
@@ -93,8 +93,8 @@ class Register extends React.Component {
 
             nameerror = 'Name is Required'
         }
-        if(event ==='email' && this.state.email===''){
-            emailerror= 'email is required'
+        if(event ==='email' && (this.state.email==='' || !this.state.email.includes('@'))){
+            emailerror= 'email is required/Invalid'
         }
         if(event ==='password' && this.state.password ===''){
             passworderror= 'password is required'
@@ -167,7 +167,7 @@ class Register extends React.Component {
                     </tr>
                     <tr>
                         <td><Link to='/'>Already User?</Link></td>
-                        <td><button>Register</button></td>
+                        <td><button disabled={this.state.buttonStatus}>Register</button></td>
                     </tr>
                     </tbody>
                     </table>

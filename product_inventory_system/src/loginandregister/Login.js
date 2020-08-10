@@ -10,7 +10,7 @@ class Login extends React.Component {
             username:'',
             password:'',
             loginStatus:false,
-
+            buttonStatus:true,
             //error
             usernameError:'',
             passwordError:'',
@@ -77,12 +77,14 @@ class Login extends React.Component {
             this.setState({
                 usernameError: usernameerror,
                 passwordError: passworderror,
+                buttonStatus:true
             })
             return false
         }
         this.setState({
             usernameError: '',
             passwordError: '',
+            buttonStatus:false
         })
         return true
      }
@@ -113,7 +115,7 @@ class Login extends React.Component {
                     </tr>
                     <tr>
                         <td><Link to="/register">forget password?</Link></td>
-                        <td><button type="submit">Login</button></td>
+                        <td><button type="submit" disabled={this.state.buttonStatus}>Login</button></td>
                     </tr>
                      </tbody>
                   

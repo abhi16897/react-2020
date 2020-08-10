@@ -1,3 +1,7 @@
-.dashboard{
-    display: inline;
+.dashboard-bar{
+        position: relative;
+        left: 10%;
+        width: 80%;
+        height: 400px;
+        margin-top: 20px;
 }
