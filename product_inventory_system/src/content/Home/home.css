@@ -1,0 +1,40 @@
+.searchBox{
+    width: 65%;
+    text-align: center;
+    position: relative;
+    left:5%;
+    padding: 10px;
+    border-radius: 20px;
+}
+.home{
+    margin-top: 50px;
+}
+.home-search{
+    display: inline;
+}
+.home-search select{
+    position: relative;
+    float: right;
+    width: 150px;
+    padding: 10px;
+    border-radius: 20px;
+    margin-right: 40px;
+}
+@media screen and (max-width:500px){
+   .home{
+    margin-top: 250px;
+   }
+}
+@media screen and (max-width:900){
+    .home-search{
+        display: inline-block;
+        margin: 5px;
+        padding: 50px;
+    }
+ }
+@media screen and (max-width:390px){
+    .product-card{
+        margin-left: 80px;
+        width: 40%;
+    }
+}

@@ -3,11 +3,10 @@ import {Link, Switch, Route,withRouter} from 'react-router-dom';
 import './nav.css'
 import Login from '../loginandregister/Login';
 import Register from '../loginandregister/Register';
-import Home from '../content/Home';
-import AddComponent from '../content/AddComponent';
-import EditComponent from '../content/EditComponent';
-//import Dashboard from '../content/Dasboard';
-import ParentDashboard from '../content/ParentDashboard';
+import Home from '../content/Home/Home';
+import AddComponent from '../content/AddOrUpdate/AddComponent';
+import EditComponent from '../content/AddOrUpdate/EditComponent';
+import ParentDashboard from '../content/Dashboard/ParentDashboard';
 class Nav extends React.Component {
     logOut(e){
         e.preventDefault();
