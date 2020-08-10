@@ -153,7 +153,7 @@ class EditComponent extends React.Component {
                 </tr>
                 <tr>
                     <td><label>Image</label></td>
-                    <td><input type="file" name="imageUrl" onChange={this.onChangeimage}/></td>
+                    <td><input type="file" name="imageUrl" onChange={this.onChangeimage} required/></td>
                 </tr>
                 <tr>
                     <td><label>Category</label></td>

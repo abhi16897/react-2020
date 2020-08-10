@@ -145,7 +145,7 @@ class AddComponent extends React.Component {
                 </tr>
                 <tr>
                     <td><label>Image</label></td>
-                    <td><input type="file"name="imageUrl" onChange={this.onChangeImage}/></td>
+                    <td><input type="file"name="imageUrl" onChange={this.onChangeImage} required/></td>
                 </tr>
                 <tr>
                     <td><label>Category</label></td>

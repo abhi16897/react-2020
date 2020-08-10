@@ -28,21 +28,21 @@
       "id": 16
     },
     {
-      "name": "Abhishek",
+      "name": "Accer",
       "price": "123",
-      "stock": "132",
-      "description": "123132",
-      "category": "Groceries",
-      "imageUrl": "graph.png",
+      "stock": "250",
+      "description": "This is nice Laptop",
+      "category": "Electronics",
+      "imageUrl": "accer.jpg",
       "id": 17
     },
     {
-      "name": "Abhishek",
-      "price": "46979",
-      "stock": "13",
-      "description": "snajkfhaksjhkjladshfjklahdsjklfhakldsjhfkjlasdhfjkadshjfkhadsjklfhajdskhfkjadshlk",
+      "name": "iphone",
+      "price": "120000",
+      "stock": "500",
+      "description": "Nice MObile",
       "category": "Electronics",
-      "imageUrl": "dell.jpg",
+      "imageUrl": "iphone.jpg",
       "id": 18
     }
   ],
