@@ -20,12 +20,12 @@ class EditComponent extends React.Component {
         }
         
     }
-    componentWillMount(){
+    componentDidMount(){
         if(localStorage.getItem('loggedIn') === null){
             this.props.history.push('/');
         }
        axios.get('http://localhost:3000/allProducts/'+this.props.match.params.id).then((res)=>{
-           console.log(res.data);
+          
            this.setState({
                name:res.data.name,
                price:res.data.price,
@@ -50,7 +50,7 @@ class EditComponent extends React.Component {
             "imageUrl":this.state.imageUrl
         }
         axios.put('http://localhost:3000/allProducts/'+this.props.match.params.id,addjsonObject).then((res)=>{
-            console.log(res.data);
+           
             this.props.history.push('/home');
         })
     }

@@ -12,16 +12,21 @@ class Home extends React.Component {
         category:'',
         }
     }
-    componentWillMount(){
+    // componentWillMount(){
+    //     if(localStorage.getItem('loggedIn') === null){
+    //         this.props.history.push('/');
+    //     }
+    //     this.getAllproducts();
+    // }
+    componentDidMount(){
         if(localStorage.getItem('loggedIn') === null){
             this.props.history.push('/');
         }
         this.getAllproducts();
     }
     getAllproducts=()=>{
-        console.log('hello');
         axios.get('http://localhost:3000/allProducts').then((res)=>{
-            console.log(res.data);
+          
             this.setState({
                 allproducts:res.data
             });
@@ -32,7 +37,7 @@ class Home extends React.Component {
     }
     deleteItem=(id)=>{
         axios.delete('http://localhost:3000/allProducts/'+id).then((res)=>{
-            console.log(res);
+           
             this.getAllproducts();
         },(err)=>{
             console.log(err);
@@ -44,8 +49,9 @@ class Home extends React.Component {
     renderall=()=>{
         return this.state.allproducts.map((prod)=>{
             return (
-                <div className='product-card'>
-                <Product key={prod.id}
+                <div className='product-card' key={prod.id}>
+                <Product 
+                        key={prod.id}
                         id={prod.id}
                         name={prod.name}
                         price={prod.price}
@@ -64,7 +70,7 @@ class Home extends React.Component {
     searchProducts=(e)=>{
         console.log(this.state.orginalList)
         if(e.target.value!==''){
-            console.log(e.target.value)
+            
             //let filterdValues=this.state.allproducts
             let filterdValues=this.state.orginalList.filter((f)=>{
                 return f.name.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase());
@@ -127,7 +133,10 @@ class Home extends React.Component {
             <div className="home">
                 <h1>Welcome Home!</h1>
                 <div className="home-search">
-                <input type="text" name="search" className="searchBox" placeholder="Serach for Products" onChange={this.searchProducts}/>
+                    <div>
+                    <input type="text" name="search" className="searchBox" placeholder="Serach for Products" onChange={this.searchProducts}/>
+                    </div>
+                <div className="home-search-select">
                 <select onChange={this.selectSort} value={this.state.sort}>
                     <option value=''>Sort Products</option>
                     <option value='name'>By Name</option>
@@ -141,6 +150,8 @@ class Home extends React.Component {
                         <option value="Vegitables">Vegitables</option>
                         <option values="Fruits">Fruits</option>
                 </select>
+                </div>
+              
                 </div>
                 <div>
                 {this.renderall()}

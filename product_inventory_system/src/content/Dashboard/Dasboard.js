@@ -1,16 +1,12 @@
 import React from 'react';
 import './dashboard.css'
+import {withRouter} from 'react-router-dom'
 class Dashboard extends React.Component {
     constructor(props){
         super(props);
         this.state={
             selectedCategory:'',
             buttonclicked:true
-        }
-    }
-    componentWillMount(){
-        if(localStorage.getItem('loggedIn') === null){
-            this.props.history.push('/');
         }
     }
     onchangeSelcet=(e)=>{
@@ -26,7 +22,9 @@ class Dashboard extends React.Component {
         this.props.parentcategory(this.state.selectedCategory)
     }
     componentDidMount(){
-        console.log(this.state.buttonclicked)
+        if(localStorage.getItem('loggedIn') === null){
+            this.props.history.push('/');
+        }
     }
     render() { 
         return (  
@@ -63,4 +61,4 @@ class Dashboard extends React.Component {
     }
 }
  
-export default Dashboard;
+export default withRouter(Dashboard);

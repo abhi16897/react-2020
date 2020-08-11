@@ -16,7 +16,7 @@ class Login extends React.Component {
             passwordError:'',
          }
      }
-     componentWillMount(){
+     componentDidMount(){
          if(localStorage.getItem('loggedIn')){
              localStorage.removeItem('loggedIn');
          }
@@ -33,12 +33,10 @@ class Login extends React.Component {
     }
      onChange=(e)=>{
          this.setState({[e.target.name]:e.target.value});
-         console.log(this.state.username);
-         console.log(this.state.password);
      }
      onSubmitLogin=(e)=>{
          e.preventDefault();
-         console.log('loggedIn');
+       
          axios.get('http://localhost:3000/userDetails/?q='+this.state.username).then((res)=>{
              console.log(res.data[0]);
              if(res.data[0]){

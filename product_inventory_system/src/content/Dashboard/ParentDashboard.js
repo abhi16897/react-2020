@@ -13,7 +13,7 @@ class ParentDashboard extends React.Component {
             }
         }
     }
-    componentWillMount(){
+    componentDidMount(){
         if(localStorage.getItem('loggedIn') === null){
             this.props.history.push('/');
         }

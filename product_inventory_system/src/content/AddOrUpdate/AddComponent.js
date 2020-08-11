@@ -22,14 +22,14 @@ class AddComponent extends React.Component {
             categoryError:''
         }
     }
-    componentWillMount(){
+    componentDidMount(){
         if(localStorage.getItem('loggedIn') === null){
             this.props.history.push('/');
         }
     }
     onChange=(e)=>{
         this.setState({[e.target.name]:e.target.value});
-        console.log(e.target.value)
+       
     }
     onSubmitadd=(e)=>{
         e.preventDefault();
@@ -42,7 +42,7 @@ class AddComponent extends React.Component {
             "imageUrl":this.state.imageUrl
         }
         axios.post('http://localhost:3000/allProducts',addjsonObject).then((res)=>{
-            console.log(res.data);
+            
             this.props.history.push('/home');
         })
     }
@@ -116,7 +116,7 @@ class AddComponent extends React.Component {
     render() { 
         return ( 
             <div className="add-form">
-            <h1>ADD/UPDATE</h1>
+            <h1>ADD</h1>
             <form onSubmit={this.onSubmitadd}>
             <table>
                 <thead></thead>

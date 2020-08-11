@@ -10,6 +10,7 @@
     margin-top: 50px;
 }
 .home-search{
+    position: relative;
     display: inline;
 }
 .home-search select{
@@ -20,14 +21,16 @@
     border-radius: 20px;
     margin-right: 40px;
 }
+
 @media screen and (max-width:500px){
    .home{
     margin-top: 250px;
    }
 }
 @media screen and (max-width:900){
-    .home-search{
-        display: inline-block;
+    .home-search,.home-search-select{
+        overflow: hidden;
+        display: block;
         margin: 5px;
         padding: 50px;
     }

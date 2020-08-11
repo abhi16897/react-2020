@@ -18,15 +18,15 @@ class Nav extends React.Component {
     render() { 
         const loginreglink=(
             <div className="custom-nav">
-                     <Link><b> Product Inventory System</b></Link>
+                     <Link to=""><b> Product Inventory System</b></Link>
                      <Link to='/register'>SignUp</Link>
                     <Link to='/'>Login</Link>
             </div>
             )
         const userLink=(
             <div className="custom-nav">
-         <Link><b> Product Inventory System</b></Link>
-            <Link onClick={this.logOut.bind(this)}>Logout</Link>
+         <Link to='#'><b> Product Inventory System</b></Link>
+            <Link to="#" onClick={this.logOut.bind(this)}>Logout</Link>
            <Link to='/addproduct'>Add Product</Link>
            <Link to='/dashboard'>Dashboard</Link>
            <Link to='/home'>Home</Link>
