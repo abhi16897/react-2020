@@ -36,7 +36,7 @@ class Dashboard extends React.Component {
                             <thead></thead>
                             <tbody>
                                 <tr>
-                                    <td><b>Select Category</b></td>
+                                    <td><span className="star">*</span><b>Select Category</b></td>
                                     <td>
                                         <select onChange={this.onchangeSelcet} required>
                                         <option value=''>Select One</option>

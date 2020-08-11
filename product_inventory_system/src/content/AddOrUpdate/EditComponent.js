@@ -129,22 +129,22 @@ class EditComponent extends React.Component {
                 <thead></thead>
                 <tbody>
                 <tr>
-                    <td><label>Name</label></td>
+                    <td><label><span className="star">*</span><b>Name</b></label></td>
                     <td><input type="text" name="name" value={this.state.name} onChange={this.onChange} onBlur={this.onblurname}/>
                     <span className="error">{this.state.nameError}</span></td>
                 </tr>
                 <tr>
-                    <td><label>Price</label></td>
+                    <td><label><span className="star">*</span><b>Price</b></label></td>
                     <td><input type="number" name="price" value={this.state.price} onChange={this.onChange} onBlur={this.onblurprice}/>
                     <span className="error">{this.state.priceError}</span></td>
                 </tr>
                 <tr>
-                    <td><label>Stock</label></td>
+                    <td><label><span className="star">*</span><b>Stock</b></label></td>
                     <td><input type="number" name="stock" value={this.state.stock} onChange={this.onChange} onBlur={this.onblurstock}/>
                     <span className="error">{this.state.stockError}</span></td>
                 </tr>
                 <tr>
-                    <td><label>Description</label></td>
+                    <td><label><span className="star">*</span><b>Description</b></label></td>
                     <td><textarea id="description" name="description" rows="4" cols="30"  value={this.state.description} onChange={this.onChange} onBlur={this.onblurdescription}>
                     <span className="error">{this.state.descriptionError}</span>
                     </textarea>
@@ -152,11 +152,11 @@ class EditComponent extends React.Component {
                     </td>
                 </tr>
                 <tr>
-                    <td><label>Image</label></td>
+                    <td><label><span className="star">*</span><b>Image</b></label></td>
                     <td><input type="file" name="imageUrl" onChange={this.onChangeimage} required/></td>
                 </tr>
                 <tr>
-                    <td><label>Category</label></td>
+                    <td><label><span className="star">*</span><b>Category</b></label></td>
                     <td><select name='category' onChange={this.onChange} value={this.state.category} onBlur={this.onblurselect}>
                         <option value=''>Select One</option>
                         <option value="Groceries">Groceries</option>

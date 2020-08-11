@@ -100,13 +100,13 @@ class Login extends React.Component {
                      </thead>
                      <tbody>
                      <tr>
-                     <td><label><b>Username</b></label></td>
+                     <td><label><span className="star">*</span><b>Username</b></label></td>
                      <td><input type="text" name="username" value={this.state.username} onChange={this.onChange} required onBlur={this.gerBlurUsername}/>
                      <span className="error">{this.state.usernameError}</span>
                      </td>
                      </tr>
                      <tr>
-                        <td><label><b>Password</b></label></td>
+                        <td><label><span className="star">*</span><b>Password</b></label></td>
                         <td><input type="password" name="password" value={this.state.password} onChange={this.onChange} required onBlur={this.getBlurPassword}/>
                         <span className="error">{this.state.passwordError}</span>
                         </td>

@@ -141,26 +141,26 @@ class Register extends React.Component {
                     </thead>
                     <tbody>
                     <tr>
-                        <td><label><b>Username</b></label></td>
+                        <td><label> <span className="star">*</span><b>Username</b></label></td>
                         <td><input type="text" name="username" value={this.state.username} onChange={this.onChange} onBlur={this.getblurName}></input>
                         <span className="error">{this.state.nameError}</span>
                         </td>
                     </tr>
                     <tr>    
-                        <td><label><b>Email</b></label></td>
+                        <td><label><span className="star">*</span><b>Email</b></label></td>
                         <td><input type="email" name="email" value={this.state.email} onChange={this.onChange} onBlur={this.getblurEmail}/>
                         <span className="error">{this.state.emailError}</span>
                         </td>
                         
                     </tr>
                     <tr>
-                        <td><label><b>Password</b></label></td>
+                        <td><label><span className="star">*</span><b>Password</b></label></td>
                         <td><input type="password" name="password" value={this.state.password} onChange={this.onChange} onBlur={this.getblurPassword}/>
                         <span className="error">{this.state.passwordError}</span>
                         </td>
                     </tr>
                     <tr>
-                        <td><label><b>Confirm Password</b></label></td>
+                        <td><label><span className="star">*</span><b>Confirm Password</b></label></td>
                         <td><input type="password" name="confirm_password" value={this.state.confirm_password} onChange={this.onChange} onBlur={this.getblurconfirmpass}/>
                         <span className="error">{this.state.confirmPasswordError}</span>
                         </td>

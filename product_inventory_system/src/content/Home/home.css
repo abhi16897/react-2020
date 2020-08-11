@@ -21,21 +21,23 @@
     border-radius: 20px;
     margin-right: 40px;
 }
-
+.star{
+    color: red;
+}
 @media screen and (max-width:500px){
    .home{
     margin-top: 250px;
    }
 }
 @media screen and (max-width:900){
-    .home-search,.home-search-select{
+    .home-search{
         overflow: hidden;
         display: block;
         margin: 5px;
         padding: 50px;
     }
  }
-@media screen and (max-width:390px){
+@media screen and (max-width:350px){
     .product-card{
         margin-left: 80px;
         width: 40%;

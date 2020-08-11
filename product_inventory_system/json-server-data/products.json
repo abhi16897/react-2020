@@ -73,6 +73,12 @@
       "email": "saiabhishek12@gmail.com",
       "password": "saiabhi1",
       "id": 3
+    },
+    {
+      "username": "user",
+      "email": "user@user.com",
+      "password": "123",
+      "id": 4
     }
   ]
 }
