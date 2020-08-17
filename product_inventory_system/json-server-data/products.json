@@ -1,58 +1,22 @@
 {
   "allProducts": [
     {
-      "name": "Hp",
-      "price": "500",
-      "stock": "200",
-      "description": "hello",
-      "category": "Groceries",
-      "imageUrl": "hp.jpg",
-      "id": 10
-    },
-    {
       "name": "Lenovo",
       "price": "940",
-      "stock": "132",
-      "description": "1464",
+      "stock": "530",
+      "description": "Elctronics",
       "category": "Electronics",
       "imageUrl": "lenovo.jpg",
-      "id": 15
+      "id": 1
     },
     {
-      "name": "Dell",
-      "price": "500",
-      "stock": "250",
-      "description": "This is a good Laptop and working Good . recommended to by",
-      "category": "Electronics",
-      "imageUrl": "dell.jpg",
-      "id": 16
-    },
-    {
-      "name": "Accer",
-      "price": "123",
-      "stock": "250",
-      "description": "This is nice Laptop",
-      "category": "Electronics",
-      "imageUrl": "accer.jpg",
-      "id": 17
-    },
-    {
-      "name": "iphone",
-      "price": "120000",
-      "stock": "520",
-      "description": "Nice MObile",
-      "category": "Electronics",
-      "imageUrl": "iphone.jpg",
-      "id": 18
-    },
-    {
-      "name": "Dell",
+      "name": "Hp",
       "price": "940",
-      "stock": "0",
-      "description": "hello",
+      "stock": "600",
+      "description": "NIce",
       "category": "Electronics",
-      "imageUrl": "graph.png",
-      "id": 19
+      "imageUrl": "hp.jpg",
+      "id": 2
     }
   ],
   "userDetails": [
@@ -79,6 +43,12 @@
       "email": "user@user.com",
       "password": "123",
       "id": 4
+    },
+    {
+      "username": "admin",
+      "email": "admin@admin.com",
+      "password": "123",
+      "id": 5
     }
   ]
 }
