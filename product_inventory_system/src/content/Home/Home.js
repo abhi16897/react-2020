@@ -12,12 +12,6 @@ class Home extends React.Component {
         category:'',
         }
     }
-    // componentWillMount(){
-    //     if(localStorage.getItem('loggedIn') === null){
-    //         this.props.history.push('/');
-    //     }
-    //     this.getAllproducts();
-    // }
     componentDidMount(){
         if(localStorage.getItem('loggedIn') === null){
             this.props.history.push('/');

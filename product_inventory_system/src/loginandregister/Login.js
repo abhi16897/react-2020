@@ -38,7 +38,7 @@ class Login extends React.Component {
          e.preventDefault();
        
          axios.get('http://localhost:3000/userDetails/?q='+this.state.username).then((res)=>{
-             console.log(res.data[0]);
+           //  console.log(res.data[0]);
              if(res.data[0]){
                 if((res.data[0].username === this.state.username && res.data[0].password === this.state.password)||(res.data[0].email === this.state.username && res.data[0].password === this.state.password)){
                     localStorage.setItem('loggedIn',true);

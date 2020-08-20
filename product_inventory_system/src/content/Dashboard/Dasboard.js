@@ -10,15 +10,15 @@ class Dashboard extends React.Component {
         }
     }
     onchangeSelcet=(e)=>{
-        console.log(e.target.value)
+      //  console.log(e.target.value)
         this.setState({selectedCategory:e.target.value})
     }
     dashboardform=(e)=>{
         e.preventDefault();
-        console.log('hello')
+     //   console.log('hello')
         this.setState({buttonclicked:true})
-        console.log(this.state.selectedCategory)
-        console.log(this.state.buttonclicked)
+    //    console.log(this.state.selectedCategory)
+      //  console.log(this.state.buttonclicked)
         this.props.parentcategory(this.state.selectedCategory)
     }
     componentDidMount(){

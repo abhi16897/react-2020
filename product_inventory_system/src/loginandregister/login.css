@@ -9,6 +9,7 @@
     background-color: #EFF0F1;
     border: 1px solid;
     padding: 10px;
+    border-radius: 30px;
     box-shadow: 5px 10px #888888;
 }
 form a{
@@ -53,6 +54,188 @@ form a{
 }
 @media screen and (max-width:600px){
     .center{
-        width: 370px;
+        width: 320px;
+        position: ;
+    }
+    .center form input{
+        width: 120px;
+    }
+}
+/* @media only screen and (min-width:300) and (max-width:330px){
+    .center{
+        width: 270px;
+    }
+} */
+@media screen and (device-width: 360px) and (device-height:640px)
+{
+    .center{
+        width: 270px;
+        position: absolute;
+        left: 55%;
+        font-size: 10px;
+        padding: 2px;
+    }
+    .center form{
+        width: 200px;
+        margin-left: 5%;
+    }
+}
+@media screen and (device-width: 411px) and (device-height:731px) 
+{
+    .center{
+        width: 270px;
+        position: absolute;
+        left: 55%;
+        font-size: 10px;
+        padding: 2px;
+    }
+    .center form{
+        width: 200px;
+        margin-left: 5%;
+    }
+}
+@media screen and (device-width: 411px) and (device-height:823px) 
+{
+    .center{
+        width: 300px;
+        position: absolute;
+        left: 50%;
+        font-size: 15px;
+        padding: 3px;
+    }
+    .center form{
+        width: 200px;
+        margin-left: 5%;
+    }
+}
+
+@media screen and (device-width: 450px) and (device-height:600px) 
+{
+    .center{
+        width: 300px;
+        position: absolute;
+        left: 50%;
+        top:45%;
+        font-size: 15px;
+        padding: 3px;
+    }
+    .center form{
+        width: 200px;
+        margin-left: 5%;
+    }
+}
+@media screen and (device-width: 280px) and (device-height:653px) 
+{
+    .center{
+        width: 250px;
+        position: absolute;
+        left: 56%;
+        top:45%;
+        font-size: 15px;
+        padding: 3px;
+    }
+    .center form{
+        width: 200px;
+        margin-left: 5%;
+    }
+    .center input{
+        width: 100px;
+    }
+}
+@media screen and (device-width: 320px) and (device-height:568px) 
+{
+    .center{
+        width: 270px;
+        position: absolute;
+        left: 52%;
+        top:50%;
+        font-size: 10px;
+        padding: 3px;
+    }
+    .center form{
+        width: 200px;
+        margin-left: 5%;
+    }
+}
+@media screen and (device-width: 375px) and (device-height:667px) 
+{
+    .center{
+        width: 290px;
+        position: absolute;
+        left: 50%;
+        top:45%;
+        font-size: 13px;
+        padding: 3px;
+    }
+    .center form{
+        width: 200px;
+        margin-left: 5%;
+    }
+}
+@media screen and (device-width: 414px) and (device-height:736px) 
+{
+    .center{
+        width: 320px;
+        position: absolute;
+        left: 48%;
+        top:45%;
+        font-size: 15px;
+        padding: 3px;
+    }
+    .center form{
+        width: 200px;
+        margin-left: 5%;
+    }
+}
+
+@media screen and (device-width: 375px) and (device-height:812px) 
+{
+    .center{
+        width: 320px;
+        position: absolute;
+        left: 48%;
+        top:45%;
+        font-size: 15px;
+        padding: 3px;
+    }
+    .center form{
+        width: 200px;
+        margin-left: 5%;
+    }
+}
+@media screen and (device-width: 768px) and (device-height:1024px) 
+{
+    .center{
+        width: 500px;
+        position: absolute;
+        left: 38%;
+        top:40%;
+        font-size: 25px;
+        padding: 5px;
+    }
+    .center form{
+        width: 250px;
+        margin-left: 5%;
+    }
+    .center button{
+        font-size: 20px;
+    }
+}
+@media screen and (device-width: 1024px) and (device-height:1366px) 
+{
+    .center{
+        width: 500px;
+        position: absolute;
+        left: 38%;
+        top:40%;
+        font-size: 25px;
+        padding: 5px;
+    }
+    .center form{
+        width: 250px;
+        margin-left: 15%;
+    }
+    .center button{
+        font-size: 20px;
     }
 }

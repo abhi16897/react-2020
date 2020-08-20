@@ -31,7 +31,7 @@ class Register extends React.Component {
     }
     getblurName = (event) => {
         this.setState({ username: event.target.value })
-        console.log(event.target.value)
+      //  console.log(event.target.value)
         this.checkValidation("username")
     }
     getblurEmail=(event)=>{
@@ -48,7 +48,7 @@ class Register extends React.Component {
     }
     onChange=(e)=>{
         this.setState({[e.target.name]:e.target.value});
-        console.log(e.target.value)
+      //  console.log(e.target.value)
         this.checkValidation(e)
     }
     onSubmitregister=(e)=>{
