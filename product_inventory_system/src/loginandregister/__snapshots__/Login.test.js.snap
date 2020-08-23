@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mathes Snapshot 1`] = `
+<div
+  className="center"
+>
+  <h1>
+    LOGIN
+  </h1>
+  <form
+    onSubmit={[Function]}
+  >
+    <table>
+      <thead />
+      <tbody>
+        <tr>
+          <td>
+            <label>
+              <span
+                className="star"
+              >
+                *
+              </span>
+              <b>
+                Username
+              </b>
+            </label>
+          </td>
+          <td>
+            <input
+              name="username"
+              onBlur={[Function]}
+              onChange={[Function]}
+              required={true}
+              type="text"
+              value=""
+            />
+            <span
+              className="error"
+            >
+              
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>
+              <span
+                className="star"
+              >
+                *
+              </span>
+              <b>
+                Password
+              </b>
+            </label>
+          </td>
+          <td>
+            <input
+              name="password"
+              onBlur={[Function]}
+              onChange={[Function]}
+              required={true}
+              type="password"
+              value=""
+            />
+            <span
+              className="error"
+            >
+              
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a
+              href="/register"
+              onClick={[Function]}
+            >
+              forget password?
+            </a>
+          </td>
+          <td>
+            <button
+              disabled={true}
+              type="submit"
+            >
+              Login
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+</div>
+`;

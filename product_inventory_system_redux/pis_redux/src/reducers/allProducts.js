@@ -1,4 +1,4 @@
-//import { act } from "react-dom/test-utils";
+
 
 const allProductsReducers=function allProductsreduce(state=null,action){
     var allProducts= [
@@ -75,7 +75,40 @@ const allProductsReducers=function allProductsreduce(state=null,action){
               state[i].imageUrl=action.payload.imageUrl
           }
         }
+        
         return state;
+        case 'sort_product':
+          if(action.payload!==''){
+            if(action.payload==='name'){    
+              allProducts.sort((a,b)=>{
+                  if(a.name.toLocaleLowerCase()<b.name.toLocaleLowerCase()){return -1}
+                  if(a.name.toLocaleLowerCase()>b.name.toLocaleLowerCase()){return 1}
+                  return 0
+          })
+              return allProducts
+          }
+         if(action.payload==='price'){
+              allProducts.sort((a,b)=>{
+                  if(parseInt(a.price)<parseInt(b.price)){return -1}
+                 if(parseInt(a.price)>parseInt(b.price)){return 1}
+                 return 0
+         })
+            return allProducts;
+          }
+          if(action.payload==='stock'){
+              allProducts.sort((a,b)=>{
+                  if(parseInt(a.stock)<parseInt(b.stock)){return -1}
+                  if(parseInt(a.stock)>parseInt(b.stock)){return 1}
+                  return 0
+          })
+             return allProducts;
+          }
+          }else{
+            return allProducts;
+          }
+         break;
+         case 'category_product':
+           return allProducts.filter(prod=>prod.category===action.payload)
       default:
         break;
     }

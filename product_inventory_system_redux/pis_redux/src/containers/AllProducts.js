@@ -5,32 +5,39 @@ import '../styles/product.css'
 import { bindActionCreators } from 'redux';
 import allproductsAction from '../actions/allproductsaction';
 import searchAction from '../actions/searchAction';
+import sortProductsAction from '../actions/sortProductsAction';
+import selectCategoryAction from '../actions/selectcategoryAction';
 //import { bindActionCreators } from 'redux';
 class AllProducts extends React.Component {
-    state = {  }
+    constructor(props){
+        super(props);
+        this.state={
+            products:this.props.products,
+            originalList:this.props.products
+        }
+    }
     updateItem=(id)=>{
         this.props.history.push('/editproduct/'+id);
     }
+   
     render() { 
         return ( 
             <div>
             <div className="home-search">
                     <input type="text" name="search" className="searchBox" placeholder="Serach for Products" onChange={(e)=>this.props.searchProducts(e.target.value)}/>
-                <select onChange={this.selectSort} value={this.state.sort}>
+                <select onChange={(e)=>this.props.selectSort(e.target.value)} value={this.state.sort}>
                     <option value=''>Sort Products</option>
                     <option value='name'>By Name</option>
                     <option value='price'>By price</option>
                     <option value='stock'>By Stock</option>
                 </select>
-                <select onChange={this.selectCategory} value={this.state.category}>
+                <select onChange={(e)=>this.props.selectCategory(e.target.value)} value={this.state.category}>
                         <option value=''>Select Category</option>
                         <option value="Groceries">Groceries</option>
                         <option value="Electronics">Electronics</option>
                         <option value="Vegitables">Vegitables</option>
                         <option values="Fruits">Fruits</option>
                 </select>
-              
-              
                 </div>
             <div className="card-layout">
              {this.props.products.map((prod)=>{
@@ -64,7 +71,9 @@ class AllProducts extends React.Component {
  function mapDispatch(dispatch){
      return bindActionCreators({
          deleteItem:allproductsAction,
-         searchProducts:searchAction
+         searchProducts:searchAction,
+         selectSort:sortProductsAction,
+         selectCategory:selectCategoryAction
      },dispatch)
  }
 

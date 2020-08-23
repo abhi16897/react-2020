@@ -17,6 +17,51 @@
       "category": "Electronics",
       "imageUrl": "hp.jpg",
       "id": 2
+    },
+    {
+      "name": "Lenovo",
+      "price": "123",
+      "description": "Hello",
+      "stock": "13",
+      "category": [],
+      "imageUrl": "accer.jpg",
+      "id": 3
+    },
+    {
+      "name": "Accer",
+      "price": "123",
+      "description": "Nice",
+      "stock": "645",
+      "category": [],
+      "imageUrl": "accer.jpg",
+      "id": 4
+    },
+    {
+      "name": "Hp",
+      "price": "465",
+      "description": "dshfakl",
+      "stock": "4665",
+      "category": [],
+      "imageUrl": "hp.jpg",
+      "id": 5
+    },
+    {
+      "name": "Hp",
+      "price": "46",
+      "description": "dsafhlk",
+      "stock": "456",
+      "category": [],
+      "imageUrl": "hp.jpg",
+      "id": 6
+    },
+    {
+      "name": "Hello",
+      "price": "123",
+      "description": "hfaksdhk",
+      "stock": "46",
+      "category": [],
+      "imageUrl": "hp.jpg",
+      "id": 7
     }
   ],
   "userDetails": [
