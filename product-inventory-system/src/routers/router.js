@@ -2,10 +2,10 @@ import React from 'react';
 import Login from '../loginandregister/login/Login'
 import Register from '../loginandregister/register/Register'
 import Home from '../content/Home/Home';
-import AddComponent from '../content/AddOrUpdate/AddComponent';
-import EditComponent from '../content/AddOrUpdate/EditComponent';
-import ParentDashboard from '../content/Dashboard/ParentDashboard';
 import { Switch, Route } from 'react-router-dom';
+import AddComponent from '../content/Add/AddComponent';
+import EditComponent from '../content/update/EditComponent';
+import ParentDashboard from'../content/parentDashboard/ParentDashboard'
 class Router extends React.Component {
     state = {  }
     render() { 

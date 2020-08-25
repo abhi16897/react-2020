@@ -48,6 +48,6 @@ it('Button field',()=>{
   expect(input.prop('type')).toEqual('submit');
 })
 test('mathes Snapshot',()=>{
-  const tree=renderer.create(<Router><Login /></Router>).toJSON()
+  const tree=renderer.create(<Router><Login /></Router>).toJSON();
   expect(tree).toMatchSnapshot();
 })

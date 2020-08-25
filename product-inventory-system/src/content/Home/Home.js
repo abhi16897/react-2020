@@ -1,7 +1,8 @@
 import React from 'react';
-import Product from './Product';
+import Product from '../product/Product';
 import axios from 'axios';
 import './home.css'
+import Paginationp from '../pagination/Pagination'
 class Home extends React.Component {
     constructor(props){
         super(props)
@@ -10,6 +11,8 @@ class Home extends React.Component {
         orginalList:[],
         sort:'',
         category:'',
+        currentPage:1,
+        postPerpage:1,
         }
     }
     componentDidMount(){
@@ -42,7 +45,10 @@ class Home extends React.Component {
         this.props.history.push('/editproduct/'+id);
     }
     renderall=()=>{
-        return this.state.allproducts.map((prod)=>{
+        const indexofLastPost=this.state.currentPage*this.state.postPerpage;
+        const indexofFirstPost=indexofLastPost-this.state.postPerpage;
+        const currentPosts=this.state.allproducts.slice(indexofFirstPost,indexofLastPost);
+        return currentPosts.map((prod)=>{
             return (
                 <div className='product-card' key={prod.id}>
                 <Product 
@@ -123,8 +129,11 @@ class Home extends React.Component {
             this.getAllproducts()
         }
     }
+    paginate=(pagenumber)=>this.setState({currentPage:pagenumber});
     render() { 
+       
         return (  
+            <div>
             <div className="home">
                 <h1>Welcome Home!</h1>
                 <div className="home-search">
@@ -145,11 +154,13 @@ class Home extends React.Component {
                         <option value="Vegitables">Vegitables</option>
                         <option values="Fruits">Fruits</option>
                 </select>
-                 </div>   
+                 </div>  
                 </div>
-                <div>
+                <div className="pagination">
+              <Paginationp postsPerPage={this.state.postPerpage} totalPosts={this.state.allproducts.length} paginate={this.paginate}></Paginationp>
+              </div> 
                 {this.renderall()}
-                </div>
+               </div>
                </div>
         );
     }

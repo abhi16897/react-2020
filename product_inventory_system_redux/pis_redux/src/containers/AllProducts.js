@@ -24,21 +24,26 @@ class AllProducts extends React.Component {
         return ( 
             <div>
             <div className="home-search">
-                    <input type="text" name="search" className="searchBox" placeholder="Serach for Products" onChange={(e)=>this.props.searchProducts(e.target.value)}/>
-                <select onChange={(e)=>this.props.selectSort(e.target.value)} value={this.state.sort}>
+               <div className="input searchBox">
+               <input type="text" name="search" className="searchBox" placeholder="Serach for Products" onChange={this.searchProducts}/>
+               </div>
+             <div className="input1">
+             <select onChange={this.selectSort} value={this.state.sort}>
                     <option value=''>Sort Products</option>
                     <option value='name'>By Name</option>
                     <option value='price'>By price</option>
                     <option value='stock'>By Stock</option>
                 </select>
-                <select onChange={(e)=>this.props.selectCategory(e.target.value)} value={this.state.category}>
+                <select onChange={this.selectCategory} value={this.state.category}>
                         <option value=''>Select Category</option>
                         <option value="Groceries">Groceries</option>
                         <option value="Electronics">Electronics</option>
                         <option value="Vegitables">Vegitables</option>
                         <option values="Fruits">Fruits</option>
                 </select>
+                 </div>   
                 </div>
+                <div>
             <div className="card-layout">
              {this.props.products.map((prod)=>{
                 return(  
@@ -58,6 +63,7 @@ class AllProducts extends React.Component {
                 </div>
              )
             }) }
+            </div>
             </div>
             </div>
          );

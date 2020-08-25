@@ -5,6 +5,10 @@
     float: left;
     width: 100%;
 }
+.pagination{
+    position: relative;   
+    left: 25%;
+}
 .input{
     display: inline-block;
     width: 40%;

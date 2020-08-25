@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mathes Snapshot 1`] = `
+<div
+  className="center"
+>
+  <h1>
+    Register
+  </h1>
+  <form
+    onSubmit={[Function]}
+  >
+    <table>
+      <thead />
+      <tbody>
+        <tr>
+          <td>
+            <label>
+               
+              <span
+                className="star"
+              >
+                *
+              </span>
+              <b>
+                Username
+              </b>
+            </label>
+          </td>
+          <td>
+            <input
+              name="username"
+              onBlur={[Function]}
+              onChange={[Function]}
+              type="text"
+              value=""
+            />
+            <span
+              className="error"
+            >
+              
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>
+              <span
+                className="star"
+              >
+                *
+              </span>
+              <b>
+                Email
+              </b>
+            </label>
+          </td>
+          <td>
+            <input
+              name="email"
+              onBlur={[Function]}
+              onChange={[Function]}
+              type="email"
+              value=""
+            />
+            <span
+              className="error"
+            >
+              
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>
+              <span
+                className="star"
+              >
+                *
+              </span>
+              <b>
+                Password
+              </b>
+            </label>
+          </td>
+          <td>
+            <input
+              name="password"
+              onBlur={[Function]}
+              onChange={[Function]}
+              type="password"
+              value=""
+            />
+            <span
+              className="error"
+            >
+              
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>
+              <span
+                className="star"
+              >
+                *
+              </span>
+              <b>
+                Confirm Password
+              </b>
+            </label>
+          </td>
+          <td>
+            <input
+              name="confirm_password"
+              onBlur={[Function]}
+              onChange={[Function]}
+              type="password"
+              value=""
+            />
+            <span
+              className="error"
+            >
+              
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a
+              href="/"
+              onClick={[Function]}
+            >
+              Already User?
+            </a>
+          </td>
+          <td>
+            <button
+              disabled={true}
+            >
+              Register
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+</div>
+`;

@@ -1,5 +1,5 @@
 import React from 'react';
-import Dashboard from './Dasboard';
+import Dashboard from '../Dashboard/Dasboard';
 import {  Bar } from 'react-chartjs-2';
 import './parentdahsboard.css';
 import axios from 'axios'

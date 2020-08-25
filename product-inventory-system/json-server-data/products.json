@@ -23,7 +23,7 @@
     {
       "name": "Accer",
       "price": "56000",
-      "stock": "123456",
+      "stock": "123",
       "description": "Hello This is Good Product",
       "category": "Electronics",
       "imageUrl": "accer.jpg",
