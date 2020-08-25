@@ -22,7 +22,7 @@ class Product extends React.Component {
                         <h1><b>{this.props.name}</b></h1>
                         <p><b>Price:</b>{this.props.price}</p>
                          <p><b>Stock:</b>{this.props.stock}</p>
-                         <p><b>Description</b>{this.props.description}</p>
+                         <p><b>Description: </b>{this.props.description}</p>
                     </section>
                     <div className="button">
                         <button id="add" onClick={this.updateItem} type="submit" >UPDATE</button>

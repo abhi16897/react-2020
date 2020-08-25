@@ -47,5 +47,21 @@
         float: none;
         display: block;
     }
- 
+}
+@media screen and (device-width: 320px) and (device-height:568px){
+    .custom-nav a, .custom-nav a:first-child{
+        float: none;
+        display: block;
+        font-size:10px;
+        overflow:none;
+    }
+}
+@media screen and (device-width: 280px) and (device-height:653px) 
+{
+    .custom-nav a, .custom-nav a:first-child{
+        float: none;
+        display: block;
+        font-size:10px;
+        overflow:none;
+    }
 }

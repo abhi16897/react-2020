@@ -19,12 +19,12 @@ class ParentDashboard extends React.Component {
         }
     }
     dashboardform=(category)=>{
-      
-        axios.get('http://localhost:3000/allProducts/?q='+category).then((res)=>{
+        axios.get('http://localhost:3000/allProducts/?username='+localStorage.getItem('username')).then((res)=>{
             let titles=[]
             var stocks=[]
             console.log(res.data)
-            this.setState({selectedData:res.data})
+            let data=res.data.filter((prod)=>prod.category===category);
+            this.setState({selectedData:data})
             this.state.selectedData.map((cat)=>{
                return(
                 titles.push(cat.name)

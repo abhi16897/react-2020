@@ -12,7 +12,6 @@ it('Render',()=>{
   const wrapper=shallow(<Login />);
   const h=wrapper.find("h1");
   const result=h.text();
-
   expect(result).toBe("LOGIN");
 })
 

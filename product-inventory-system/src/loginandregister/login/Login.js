@@ -37,12 +37,15 @@ class Login extends React.Component {
      onSubmitLogin=(e)=>{
          e.preventDefault();
        
-         axios.get('http://localhost:3000/userDetails/?q='+this.state.username).then((res)=>{
+         axios.get('http://localhost:3000/userDetails/?username='+this.state.username).then((res)=>{
            //  console.log(res.data[0]);
              if(res.data[0]){
                 if((res.data[0].username === this.state.username && res.data[0].password === this.state.password)||(res.data[0].email === this.state.username && res.data[0].password === this.state.password)){
                     localStorage.setItem('loggedIn',true);
+                    localStorage.setItem('username',res.data[0].username);
+                    console.log(localStorage.getItem('username'));
                     this.props.history.push('/home');
+                   
                  }else{
                     this.setState({loginStatus:true});
                     this.initialsate();
@@ -51,7 +54,6 @@ class Login extends React.Component {
                 this.setState({loginStatus:true});
                 this.initialsate();
              }
-           
          })  
      }
      getBlurPassword=(event)=>{

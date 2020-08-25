@@ -1,0 +1,261 @@
+.home{
+    margin-top: 50px;
+}
+.home-search{
+    float: left;
+    width: 100%;
+}
+.input{
+    display: inline-block;
+    width: 40%;
+    float: left;
+    position: inherit;
+    padding: 10px;
+}
+.input1{
+    display: inline-block;
+    width: 40%;
+    float: left;
+    position: inherit;
+    padding: 10px;
+}
+.searchBox{
+    width: 50%;
+    text-align: center;
+    position: relative;
+    padding: 10px;
+    border-radius: 20px;
+}
+.home-search select{
+    display: inline;
+    float: right;
+    width: 150px;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 20px;
+}
+.star{
+    color: red;
+}
+@media screen and (max-width:500px){
+   .home{
+    margin-top: 250px;
+   }
+}
+@media screen and (max-width:900){
+    .home-search{
+        overflow: hidden;
+        display: block;
+        margin: 5px;
+        padding: 50px;
+    }
+ }
+ @media screen and (device-width: 280px) and (device-height:653px) 
+{
+    .home{
+        margin-top: 200px;
+    }
+    .home-search select{
+        display: block;
+    }
+}
+@media screen and (device-width: 360px) and (device-height:640px) 
+{
+    .input .searchBox{
+        position: relative;
+        float: left;
+        width: 90%;
+    }
+    .input{
+        width: 90%;
+        position: relative;
+    }
+    .input1{
+        display:block;
+        position: relative;
+        left: 25%;
+    }
+    .input1 select{
+        margin-bottom: 10px;
+    }
+}
+@media screen and (device-width: 411px) and (device-height:731px) 
+{
+    .input .searchBox{
+        position: relative;
+        float: left;
+        width: 90%;
+    }
+    .input{
+        width: 90%;
+        position: relative;
+    }
+    .input1{
+        display:block;
+        position: relative;
+        left: 25%;
+    }
+    .input1 select{
+        margin-bottom: 10px;
+    }
+}
+@media screen and (device-width: 411px) and (device-height:823px) 
+{
+    .input .searchBox{
+        position: relative;
+        float: left;
+        width: 90%;
+    }
+    .input{
+        width: 90%;
+        position: relative;
+    }
+    .input1{
+        display:block;
+        position: relative;
+        left: 25%;
+    }
+    .input1 select{
+        margin-bottom: 10px;
+    }
+}
+@media screen and (device-width: 320px) and (device-height:568px) 
+{
+    .input .searchBox{
+        position: relative;
+        float: left;
+        width: 90%;
+    }
+    .input{
+        width: 90%;
+        position: relative;
+    }
+    .input1{
+        display:block;
+        position: relative;
+        left: 33%;
+    }
+    .input1 select{
+        margin-bottom: 10px;
+    }
+}
+@media screen and (device-width: 375px) and (device-height:667px) 
+{
+    .input .searchBox{
+        position: relative;
+        float: left;
+        width: 90%;
+    }
+    .input{
+        width: 90%;
+        position: relative;
+    }
+    .input1{
+        display:block;
+        position: relative;
+        left: 33%;
+    }
+    .input1 select{
+        margin-bottom: 10px;
+    }
+}
+@media screen and (device-width: 414px) and (device-height:736px) 
+{
+    .input .searchBox{
+        position: relative;
+        float: left;
+        width: 90%;
+    }
+    .input{
+        width: 90%;
+        position: relative;
+    }
+    .input1{
+        display:block;
+        position: relative;
+        left: 33%;
+    }
+    .input1 select{
+        margin-bottom: 10px;
+    }
+}
+@media screen and (device-width: 375px) and (device-height:812px) 
+{
+    .input .searchBox{
+        position: relative;
+        float: left;
+        width: 90%;
+    }
+    .input{
+        width: 90%;
+        position: relative;
+    }
+    .input1{
+        display:block;
+        position: relative;
+        left: 33%;
+    }
+    .input1 select{
+        margin-bottom: 10px;
+    }
+}
+@media screen and (device-width: 768px) and (device-height:1024px) 
+{
+    .input .searchBox{
+        position: relative;
+        float: left;
+        width: 90%;
+    }
+    .input{
+        width: 90%;
+        position: relative;
+    }
+    .input1{
+        display:inline-block;
+        position: relative;
+        left: 33%;
+    }
+    .input1 select{
+        margin-bottom: 10px;
+    }
+}
+@media screen and (device-width: 450px) and (device-height:600px) 
+{
+    .input .searchBox{
+        position: relative;
+        float: left;
+        width: 90%;
+    }
+    .input{
+        width: 90%;
+        position: relative;
+    }
+    .input1{
+        display:inline-block;
+        position: relative;
+        left: 25%;
+    }
+    .input1 select{
+        margin-bottom: 10px;
+    }
+}
+@media screen and (device-width: 280px) and (device-height:653px) 
+{
+    .input .searchBox{
+        position: relative;
+        float: left;
+        width: 90%;
+    }
+    .input{
+        width: 90%;
+        position: relative;
+    }
+    .input1{
+        display:inline-block;
+        position: relative;
+        left: 33%;
+    }
+    .input1 select{
+        margin-bottom: 10px;
+    }
+}

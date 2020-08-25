@@ -20,7 +20,7 @@ class Home extends React.Component {
     }
     getAllproducts=()=>{
       
-        axios.get('http://localhost:3000/allProducts').then((res)=>{
+        axios.get('http://localhost:3000/allProducts/?username='+localStorage.getItem('username')).then((res)=>{
           
             this.setState({
                 allproducts:res.data
@@ -128,11 +128,11 @@ class Home extends React.Component {
             <div className="home">
                 <h1>Welcome Home!</h1>
                 <div className="home-search">
-               
-                    <input type="text" name="search" className="searchBox" placeholder="Serach for Products" onChange={this.searchProducts}/>
-             
-                
-                <select onChange={this.selectSort} value={this.state.sort}>
+               <div className="input searchBox">
+               <input type="text" name="search" className="searchBox" placeholder="Serach for Products" onChange={this.searchProducts}/>
+               </div>
+             <div className="input1">
+             <select onChange={this.selectSort} value={this.state.sort}>
                     <option value=''>Sort Products</option>
                     <option value='name'>By Name</option>
                     <option value='price'>By price</option>
@@ -145,8 +145,7 @@ class Home extends React.Component {
                         <option value="Vegitables">Vegitables</option>
                         <option values="Fruits">Fruits</option>
                 </select>
-              
-              
+                 </div>   
                 </div>
                 <div>
                 {this.renderall()}

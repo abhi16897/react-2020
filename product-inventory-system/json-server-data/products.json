@@ -7,6 +7,7 @@
       "description": "Elctronics",
       "category": "Electronics",
       "imageUrl": "lenovo.jpg",
+      "username": "abhi16897",
       "id": 1
     },
     {
@@ -16,52 +17,27 @@
       "description": "NIce",
       "category": "Electronics",
       "imageUrl": "hp.jpg",
+      "username": "abhi16898",
       "id": 2
     },
     {
-      "name": "Lenovo",
-      "price": "123",
-      "description": "Hello",
-      "stock": "13",
-      "category": [],
+      "name": "Accer",
+      "price": "56000",
+      "stock": "123456",
+      "description": "Hello This is Good Product",
+      "category": "Electronics",
       "imageUrl": "accer.jpg",
+      "username": "abhi16897",
       "id": 3
     },
     {
-      "name": "Accer",
-      "price": "123",
-      "description": "Nice",
-      "stock": "645",
-      "category": [],
-      "imageUrl": "accer.jpg",
+      "name": "Lenovo",
+      "price": "12346",
+      "description": "Hello",
+      "stock": "132",
+      "category": "Electronics",
+      "imageUrl": "hp.jpg",
       "id": 4
-    },
-    {
-      "name": "Hp",
-      "price": "465",
-      "description": "dshfakl",
-      "stock": "4665",
-      "category": [],
-      "imageUrl": "hp.jpg",
-      "id": 5
-    },
-    {
-      "name": "Hp",
-      "price": "46",
-      "description": "dsafhlk",
-      "stock": "456",
-      "category": [],
-      "imageUrl": "hp.jpg",
-      "id": 6
-    },
-    {
-      "name": "Hello",
-      "price": "123",
-      "description": "hfaksdhk",
-      "stock": "46",
-      "category": [],
-      "imageUrl": "hp.jpg",
-      "id": 7
     }
   ],
   "userDetails": [

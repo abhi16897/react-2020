@@ -1,35 +1,44 @@
 import React from 'react';
-import './addcomponent.css';
+import './addcomponent.css'
 import axios from 'axios';
-
-class AddComponent extends React.Component {
+class EditComponent extends React.Component {
     constructor(){
         super()
         this.state={
             name:'',
-            price:'',
-            stock:'',
+            price:0,
+            stock:0,
             description:'',
             category:'',
             imageUrl:'',
-            buttonStatus:true,
 
-            //Error
             nameError:'',
             priceError:'',
             stockError:'',
             descriptionError:'',
             categoryError:''
         }
+        
     }
     componentDidMount(){
         if(localStorage.getItem('loggedIn') === null){
             this.props.history.push('/');
         }
+       axios.get('http://localhost:3000/allProducts/'+this.props.match.params.id).then((res)=>{
+          
+           this.setState({
+               name:res.data.name,
+               price:res.data.price,
+               stock:res.data.stock,
+               description:res.data.description,
+               category:res.data.category,
+               imageUrl:res.data.imageUrl
+           })
+       })
     }
     onChange=(e)=>{
-        this.setState({[e.target.name]:e.target.value});
-       
+        e.preventDefault()
+        this.setState({[e.target.name]:e.target.value})
     }
     onSubmitadd=(e)=>{
         e.preventDefault();
@@ -39,10 +48,10 @@ class AddComponent extends React.Component {
             "stock":this.state.stock,
             "description":this.state.description,
             "category":this.state.category,
-            "imageUrl":this.state.imageUrl
+            "imageUrl":this.state.imageUrl,
+            "username":localStorage.getItem('username')
         }
-        axios.post('http://localhost:3000/allProducts',addjsonObject).then((res)=>{
-            
+        axios.put('http://localhost:3000/allProducts/'+this.props.match.params.id,addjsonObject).then((res)=>{
             this.props.history.push('/home');
         })
     }
@@ -59,7 +68,7 @@ class AddComponent extends React.Component {
         if(event === 'price' && (this.state.price==='' || this.state.price<=0)){
             priceerror='price is required/Invalid'
         }
-        if(event ==='stock' && (this.state.stock==='' || this.state.stock<=0)){
+        if(event ==='stock' && (this.state.stock==='' || this.state.stock<0)){
             stockerror='stock is required/Invalid'
         }
         if(event ==='description' && this.state.description ===''){
@@ -74,7 +83,7 @@ class AddComponent extends React.Component {
                 priceError:priceerror,
                 stockError:stockerror,
                 descriptionError:descriptionerror,
-                categoryError:categoryerror,
+                categoryError:categoryerror
             })
             return false
         }
@@ -83,8 +92,7 @@ class AddComponent extends React.Component {
             priceError:'',
             stockError:'',
             descriptionError:'',
-            categoryError:'',
-            buttonStatus:false
+            categoryError:''
         })
         return true
 
@@ -109,49 +117,48 @@ class AddComponent extends React.Component {
         this.setState({category:event.target.value})
         this.checkValidation('category')
     }
-    onChangeImage=(e)=>{
-        console.log(e.target.files[0].name);
-        this.setState({imageUrl:e.target.files[0].name});
+    onChangeimage=(event)=>{
+        this.setState({imageUrl:event.target.files[0].name})
     }
     render() { 
-        return ( 
+        return (  
+            
             <div className="add-form">
-            <h1>ADD</h1>
+            <h1>UPDATE</h1>
             <form onSubmit={this.onSubmitadd}>
             <table>
                 <thead></thead>
                 <tbody>
                 <tr>
                     <td><label><span className="star">*</span><b>Name</b></label></td>
-                    <td><input type="text" name="name" value={this.state.name} onChange={this.onChange} required onBlur={this.onblurname}/>
-                    <span className="error">{this.state.nameError}</span>
-                    </td>
+                    <td><input type="text" name="name" value={this.state.name} onChange={this.onChange} onBlur={this.onblurname}/>
+                    <span className="error">{this.state.nameError}</span></td>
                 </tr>
                 <tr>
                     <td><label><span className="star">*</span><b>Price</b></label></td>
                     <td><input type="number" name="price" value={this.state.price} onChange={this.onChange} onBlur={this.onblurprice}/>
-                    <span className="error">{this.state.priceError}</span>
-                    </td>
+                    <span className="error">{this.state.priceError}</span></td>
                 </tr>
                 <tr>
                     <td><label><span className="star">*</span><b>Stock</b></label></td>
                     <td><input type="number" name="stock" value={this.state.stock} onChange={this.onChange} onBlur={this.onblurstock}/>
-                    <span className="error">{this.state.stockError}</span>
-                    </td>
+                    <span className="error">{this.state.stockError}</span></td>
                 </tr>
                 <tr>
                     <td><label><span className="star">*</span><b>Description</b></label></td>
-                    <td><textarea id="description" name="description" rows="4" cols="30"  value={this.state.description} onChange={this.onChange} onBlur={this.onblurdescription}></textarea>
+                    <td><textarea id="description" name="description" rows="4" cols="30"  value={this.state.description} onChange={this.onChange} onBlur={this.onblurdescription}>
                     <span className="error">{this.state.descriptionError}</span>
+                    </textarea>
+                        
                     </td>
                 </tr>
                 <tr>
-                    <td><label><span className="star">*</span><b>Image</b></label></td>
-                    <td><input type="file"name="imageUrl" onChange={this.onChangeImage} required/></td>
+                    <td><label><b>Image</b></label></td>
+                    <td><input type="file" name="imageUrl" onChange={this.onChangeimage} /></td>
                 </tr>
                 <tr>
                     <td><label><span className="star">*</span><b>Category</b></label></td>
-                    <td><select name='category' onChange={this.onChange} onBlur={this.onblurselect}>
+                    <td><select name='category' onChange={this.onChange} value={this.state.category} onBlur={this.onblurselect}>
                         <option value=''>Select One</option>
                         <option value="Groceries">Groceries</option>
                         <option value="Electronics">Electronics</option>
@@ -163,16 +170,15 @@ class AddComponent extends React.Component {
                 </tr>
                 <tr>
                     <td></td>
-                    <td><button type="submit" disabled={this.state.buttonStatus}>Add</button></td>
+                    <td><button type="submit">Update</button></td>
                 </tr>
                 </tbody>
                
             </table>
         </form>
         </div>
-
-         );
+        );
     }
 }
  
-export default AddComponent;
+export default EditComponent;
